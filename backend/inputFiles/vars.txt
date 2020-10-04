@@ -1,0 +1,7 @@
+In this text file you can fill out your preferences for the summarizer. inputType can be
+defined as text, url, or pdf, and the input file must be filled out correspondingly
+
+
+#####
+num_sentences = 8
+inputType = text
