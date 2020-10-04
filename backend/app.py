@@ -28,7 +28,7 @@ def get_article():
 
 @app.route('/get_scan', methods=['POST'])
 def get_scan():
-    file = request.files['file'] 
+    file = request.files['body'] 
     text = image_text_conversion(scan)
     output, _ = summarize_text(text, num_sentences=8)
     return jsonify(output=output)

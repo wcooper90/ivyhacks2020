@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import { Button, Container } from './styles'
-import axios from 'axios';
+// import axios from 'axios';
 
 
 function Scan() {
@@ -13,7 +13,7 @@ function Scan() {
   const [inputFile, setInputFile] = useState([]);
   const [summaryText, setSummaryText] = useState("");
 
-  const summarizeFile = async file => {
+  const onChangeFile = async file => {
     const settings = {
       method: 'POST',
       headers: {
@@ -30,6 +30,11 @@ function Scan() {
         <div>
 
           <Container>
+            <h2>
+              Scanned input coming Soon !
+            </h2>
+          </Container>
+          <Container>
             <p>
               Enter your file below and click "Summarize" to see a quick summarization! This demo
               makes a quick call to a backend API which implements a TextRank method to summarize the text. More options
@@ -38,15 +43,9 @@ function Scan() {
           </Container>
           <br />
           <Container>
-          <input type="file" name="file" onChange={this.onChangeHandler}/>
-            <Button onClick={this.uploadFile}>
-              Upload
-            </Button>
-          </Container>
-          <Container>
-            <Button onClick={() => summarizeFile(inputFile)}>
-               Summarize
-            </Button>
+          <input type="file" name="file" onChange={e => onChangeFile(e)}/>
+
+
           </Container>
           <br />
           <Container>

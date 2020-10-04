@@ -29,6 +29,11 @@ function Text() {
         <div>
 
           <Container>
+            <h2>
+              Video input coming Soon !
+            </h2>
+          </Container>
+          <Container>
             <p>
               Enter your video URL into the left hand box and click "Summarize" to see a quick summarization! This demo
               makes a quick call to a backend API which implements a TextRank method to summarize the text. More options
